@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3c1f056b-f065-48a8-97d1-82d998d567e1" activeEnvironment="Default" name="QRCodesAPI" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="26ba1f6a-a494-44a0-a662-86be55e33b12" wadlVersion="http://wadl.dev.java.net/2009/02" name="QRCodesAPI" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="" path="/qr-codes" id="7b44ee75-ae64-4668-b5f4-77bf53f82d4f"><con:settings/><con:parameters><con:parameter><con:name>codeKey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>simpleCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>userId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>amount</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>tipAmount</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>currency</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="qr-code" id="9717c8f7-5d91-470e-b961-2288f9aafcf3" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:qr="http://localhost/qr-codes">qr:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401 422 503</con:status><con:params/><con:element xmlns:qr="http://localhost/qr-codes">qr:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="QRCodes Request" id="2db3e10e-747a-4028-a3b5-0bb85a4821b0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-Mock" value="1" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/qr-codes</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>codeKey</con:entry><con:entry>simpleCode</con:entry><con:entry>userId</con:entry><con:entry>amount</con:entry><con:entry>tipAmount</con:entry><con:entry>currency</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="094cd46d-6e3d-4033-acc7-611921573b18" name="QRCodesAPI TestSuite"><con:description>TestSuite generated for REST Service [http://localhost]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="5370f700-9342-45f5-9a42-b9da27e8772d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [] located at [/qr-codes]</con:description><con:settings/><con:testStep type="restrequest" name="ValidarCodigoQR-200 Request" id="359be84b-c56a-482f-86da-0c05dd1fc139"><con:settings/><con:config service="QRCodesAPI" resourcePath="/qr-codes" methodName="qr-code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ValidarCodigoQR-200 Request" id="2db3e10e-747a-4028-a3b5-0bb85a4821b0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-Mock" value="200" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/qr-codes</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="codeKey" value=""/>
+  <con:entry key="amount" value=""/>
+  <con:entry key="tipAmount" value=""/>
+  <con:entry key="currency" value=""/>
+  <con:entry key="simpleCode" value=""/>
+  <con:entry key="userId" value=""/>
+</con:parameters><con:parameterOrder><con:entry>codeKey</con:entry><con:entry>simpleCode</con:entry><con:entry>userId</con:entry><con:entry>amount</con:entry><con:entry>tipAmount</con:entry><con:entry>currency</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ValidarCodigoQR-401 Request" id="7acf9ba1-9b9b-4415-a6fb-c4502ddadb30"><con:settings/><con:config service="QRCodesAPI" resourcePath="/qr-codes" methodName="qr-code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ok Request" id="2db3e10e-747a-4028-a3b5-0bb85a4821b0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-Mock" value="401" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/qr-codes</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="codeKey" value=""/>
+  <con:entry key="amount" value=""/>
+  <con:entry key="tipAmount" value=""/>
+  <con:entry key="currency" value=""/>
+  <con:entry key="simpleCode" value=""/>
+  <con:entry key="userId" value=""/>
+</con:parameters><con:parameterOrder><con:entry>codeKey</con:entry><con:entry>simpleCode</con:entry><con:entry>userId</con:entry><con:entry>amount</con:entry><con:entry>tipAmount</con:entry><con:entry>currency</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ValidarCodigoQR-422 Request" id="956687c6-7b55-4f7d-bef5-01d7b90ef394"><con:settings/><con:config service="QRCodesAPI" resourcePath="/qr-codes" methodName="qr-code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ValidarCodigoQR-422 Request" id="2db3e10e-747a-4028-a3b5-0bb85a4821b0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-Mock" value="422" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/qr-codes</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="codeKey" value=""/>
+  <con:entry key="amount" value=""/>
+  <con:entry key="tipAmount" value=""/>
+  <con:entry key="currency" value=""/>
+  <con:entry key="simpleCode" value=""/>
+  <con:entry key="userId" value=""/>
+</con:parameters><con:parameterOrder><con:entry>codeKey</con:entry><con:entry>simpleCode</con:entry><con:entry>userId</con:entry><con:entry>amount</con:entry><con:entry>tipAmount</con:entry><con:entry>currency</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ValidarCodigoQR-503 Request" id="ccebc854-35a4-4bca-b681-84599841e07d"><con:settings/><con:config service="QRCodesAPI" resourcePath="/qr-codes" methodName="qr-code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ValidarCodigoQR-503 Request" id="2db3e10e-747a-4028-a3b5-0bb85a4821b0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-Mock" value="503" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/qr-codes</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="codeKey" value=""/>
+  <con:entry key="amount" value=""/>
+  <con:entry key="tipAmount" value=""/>
+  <con:entry key="currency" value=""/>
+  <con:entry key="simpleCode" value=""/>
+  <con:entry key="userId" value=""/>
+</con:parameters><con:parameterOrder><con:entry>codeKey</con:entry><con:entry>simpleCode</con:entry><con:entry>userId</con:entry><con:entry>amount</con:entry><con:entry>tipAmount</con:entry><con:entry>currency</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:restMockService id="901866d7-2646-4a34-b8ba-19335f4e3981" port="8080" path="/" host="DESKTOP-RJJU9I9" name="QrCodesAPI Mock"><con:settings/><con:properties/><con:restMockAction name="ValidarCodigoQR" method="GET" resourcePath="/qr-code" id="7d65e129-aecd-4077-b477-5f3f4fd279c2"><con:settings/><con:defaultResponse>200 Response</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>// Get Headres
+def xMock = mockRequest.getRequestHeaders().get("X-Mock")
+
+switch( xMock.get(0) ) {
+	case "200":
+		return "200 Response"
+	break
+	case "401":
+		return "401 Response"
+	break
+	case "422":
+		return "422 Response"
+	break
+	case "503":
+		return "503 Response"
+	break
+	default:
+		log.info "Mock invalido: "
+}</con:dispatchPath><con:response name="ValidarCodigoQR-200 Response" id="13cb5431-5b95-4e3a-8523-effc8233eae1" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+    "meta": {
+        "_msgId": "2be3269e-daa3-4c44-a61d-fb2822064683",
+        "_version": "0.0.1",
+        "_rqDateTime": "2020-02-10T09:30Z",
+        "_rsLength": 1,
+        "_clientId": "8303713-1",
+        "_transactionId": "10bde082-2897-470e-b540-65b3b3a765d9"
+    },
+    "links": {
+        "self": "https://$(catalog.host)/transbank/sandbox/qrCodes?codeKey=946103610364u44y2842&amp;date=2020-10-20&amp;walletUUID=1234567891011121400"
+    },
+    "data": {
+        "attributes": {
+            "transaction": {
+                "id": "123456789023454310000",
+                "timeRemaining": 300,
+                "amount": 10000,
+                "tip": 500,
+                "totalAmount": 10500,
+                "currency": "CLP"
+            },
+            "commerce": {
+                "name": "Emporio SUSAN",
+                "code": "597038358200",
+                "logoURL": "https://web1qa.test.transbank.cl:8443/imagingservlet/LogoServlet?commerceId=597038358200",
+                "paymentTypes": [
+                    {
+                        "code": "VN",
+                        "minFees": 0,
+                        "maxFees": 0,
+                        "description": "Venta Normal"
+                    },
+                    {
+                        "code": "SI",
+                        "minFees": 3,
+                        "maxFees": 3,
+                        "description": "Tres Cuotas Sin Interes"
+                    },
+                    {
+                        "code": "VI",
+                        "minFees": 2,
+                        "maxFees": 48,
+                        "description": "Venta Cuotas"
+                    }
+                ],
+                "brands": [
+                    "REDCOMPRA",
+                    "VISA",
+                    "MASTERCARD",
+                    "DINERS",
+                    "AMEX",
+                    "MAGNA"
+                ]
+            }
+        },
+        "type": "qrCodes",
+        "id": "1234567890"
+    }
+}</con:responseContent></con:response><con:response name="ValidarCodigoQR-401 Response" id="5e95fcd6-7d63-41df-89eb-208c52fff7fc" httpResponseStatus="401" mediaType="application/json"><con:settings/><con:responseContent>{
+    "httpCode": "401",
+    "httpMessage": "Unauthorized",
+    "moreInformation": "Invalid client id or secret."
+}</con:responseContent></con:response><con:response name="ValidarCodigoQR-422 Response" id="5205aa2b-0baf-43ad-8cb1-582664912eed" httpResponseStatus="422" mediaType="application/json"><con:settings/><con:responseContent>{
+    "meta": {
+        "_msgId": "8a721856-51f5-4f39-a856-c18265ae79c4",
+        "_version": "0.0.1",
+        "_rqDateTime": "2018-02-10T09:30Z",
+        "_rsLength": 2,
+        "_clientId": "8303713-1",
+        "_transactionId": "298a4089-ce9c-4bb8-9313-7ee101900040"
+    },
+    "errors": [
+        {
+            "status": "422",
+            "title": "simple-code invalido",
+            "detail": "el parametro simple-code no cumple con el formato esperado",
+            "source": {
+                "pointer": "simple-code"
+            }
+        },
+        {
+            "status": "422",
+            "title": "amount invalido",
+            "detail": "el parametro amount debe ser númerico",
+            "source": {
+                "pointer": "amount"
+            }
+        }
+    ]
+}</con:responseContent></con:response><con:response name="ValidarCodigoQR-503 Response" id="2450d29c-f0cf-4bc6-a568-3119f2e842c8" httpResponseStatus="503" mediaType="application/json"><con:settings/><con:responseContent>{
+    "meta": {
+        "_msgId": "dec6318f-c387-47a7-888d-6b7b48ea2914",
+        "_version": "0.0.1",
+        "_rqDateTime": "2018-02-10T09:30Z",
+        "_clientId": "203030331-2",
+        "_transactionId": "d469ada0-996e-4345-98f1-5c4ee161a1ab",
+        "_rsLength": 1
+    },
+    "errors": [
+        {
+            "status": "503",
+            "title": "Servicio interno no disponible",
+            "detail": "El servicio interno no se encuentra en funcionamiento."
+        }
+    ]
+}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
